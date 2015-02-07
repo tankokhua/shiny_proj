@@ -20,14 +20,20 @@ getformula <- function(x) {
 shinyServer(
     function(input, output) {
       formula <- reactive({getformula({input$id1})})
-      output$oid1 <- renderPrint({formula()})
+      output$oid1 <- renderPrint({
+         formula()
+      })
       output$oid2 <- renderPrint({
-         lm({formula()}, data=mtcars)$coef
+         input$goButton
+         isolate(summary(lm({formula()}, data=mtcars))$coef)
       })
       output$resPlot <- renderPlot({
-         fit <- lm({formula()}, data=mtcars)
-         par(mfrow=c(2,2))
-         plot(fit)
+         input$goButton
+         isolate({
+           fit <- lm({formula()}, data=mtcars)
+           par(mfrow=c(2,2))
+           plot(fit)
+         })
       })
     }
 )
