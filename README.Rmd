@@ -2,20 +2,38 @@
 
 ## Introduction
 The 'mtcars' dataset consists of data from the 1974 Motor Trend US magazine.
-It comprises fuel consumption (mpg) and 10 other aspects of automboile design and
+It comprises fuel consumption (mpg) and 10 other aspects of automobile design and
 performance for 32 automobiles.
 
 ``` {r}
 names(mtcars)
 ```
+The purpose of this app is to allow user to carry out multivariate linear regression analysis of the 10 aspects of automobile design on the fuel consumption (mpg).
 
+## Launching the App
 
+This app is best run using the RStudio. First download the "ui.R" and "server.R" files to the same directory. Then there are 2 ways to launch the app:
+
+1. Open either one of files from the RStudio, a "Run App" button will appear, click on that to launch the app.
+2. Set the working directory to the same directory as the 2 files, then type "runApp()" from the "Console".
 
 ## User Interface
+On launching the app, the display consists of 2 main panels, the left input panel and the right output panel.
 
+### Input Panel
+The input panel consists of 10 checkboxes for the user to select the 10 aspects that may have influence on the fuel consumption.
 
+* The selected items will be used as the regressors to perform linear regression in order to determine their significances.
+* By default, all 10 items will be used if no items are selected. 
+* The formula will be displayed each time an item is selected or unselected.
+* To generate the output, click the "Go" button after the selection is completed.
 
+### Output Panel
+The output panel is make up of 3 parts:
 
+* The linear regression formula
+* The coefficients of the linear regression
+* The residual plots
 
-## Output
-
+For more information about linear regression and interpretation of the results, you can sign up for Regression Models 
+(https://www.coursera.org/course/regmods) of the Data Science track.
