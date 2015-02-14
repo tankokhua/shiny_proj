@@ -1,4 +1,4 @@
-## Shiny App used for Exploratory Study of "mtcars" dataset
+## Shiny App for Exploratory Regression Analysis of "mtcars" dataset
 
 ## Introduction
 The 'mtcars' dataset consists of data from the 1974 Motor Trend US magazine.
@@ -9,6 +9,8 @@ performance for 32 automobiles.
 names(mtcars)
 ```
 The purpose of this app is to allow user to carry out multivariate linear regression analysis of the 10 aspects of automobile design on the fuel consumption (mpg).
+
+* http://tankokhua.github.io/shiny_slides
 
 ## Launching the App
 
@@ -34,7 +36,6 @@ The output panel is make up of 3 parts:
 * The linear regression formula
 * The coefficients of the linear regression
 * The residual plots
-* http://tankokhua.github.io/shiny_slides
 
 For more information about linear regression and interpretation of the results, you can sign up for Regression Models 
 (https://www.coursera.org/course/regmods) of the Data Science track.
