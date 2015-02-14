@@ -34,6 +34,7 @@ The output panel is make up of 3 parts:
 * The linear regression formula
 * The coefficients of the linear regression
 * The residual plots
+* http://tankokhua.github.io/shiny_slides
 
 For more information about linear regression and interpretation of the results, you can sign up for Regression Models 
 (https://www.coursera.org/course/regmods) of the Data Science track.
